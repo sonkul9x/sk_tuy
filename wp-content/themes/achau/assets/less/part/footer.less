@@ -1,0 +1,155 @@
+#site-footer{
+	color:fade(@white, 40%);
+}
+.footer{
+	padding:50px 0 0;
+	background-color:#0a601e;
+}
+.bottom-footer{
+	padding:30px 0;
+	background-color:#086a1f;
+	text-align:center;
+}
+.ft-about{
+	border-top:5px solid @maincolor2;
+	padding:65px 30px;
+	text-align:center;
+	background:url(../images/bg_logo_footer.jpg) no-repeat;
+	background-size:cover;
+	margin-bottom:-30px;
+	p{
+		color:@white;
+	}
+}
+.logo-footer{
+	margin-bottom:35px;
+}
+.ft-title{
+	color:@white;
+	text-transform:uppercase;
+	margin-bottom:20px;
+	font-size:16px;
+	line-height:22px;
+}
+.ft-menu{
+	ul{
+		li{
+			display:block;
+			width:50%;
+			float:left;
+			text-transform:uppercase;
+			margin-bottom:40px;
+			&:nth-child(2n+1){
+				clear:both;
+			}
+			a{
+				color:@white;
+				&:hover{
+					color:@maincolor2;
+				}
+			}
+		}
+	}
+}
+.ft-contact-info{
+	ul{
+		li{
+			position:relative;
+			margin-bottom:20px;
+			padding-left:40px;
+			&:before{
+				content:'';
+				display:block;
+				width:20px;
+				height:30px;
+				position:absolute;
+				top:6px;
+				left:0;
+				z-index:10;
+				.opacity(0.5);
+			}
+			&.address{
+				&:before{
+					background:url(../images/icon/icon-map.png) no-repeat;
+				}
+			}
+			&.email{
+				&:before{
+					background:url(../images/icon/icon-email.png) no-repeat;
+				}
+			}
+			&.phone{
+				&:before{
+					background:url(../images/icon/icon-phone.png) no-repeat;
+				}
+			}
+			.text{
+				display:block;
+			}
+		}
+	}
+}
+.ft-brands{
+	.widget_achau_brand_carousel{
+		margin-bottom:80px;
+		.widget-title{
+			display:none;
+		}
+	}
+}
+.widget_social_media{
+	a{
+		display:inline-block;
+		width:38px;
+		height:38px;
+		border:2px solid fade(@white, 40%);
+		.border-radius(50%);
+		overflow:hidden;
+		text-indent:-999px;
+		position:relative;
+		margin-right:20px;
+		&:hover{
+			color:@white;
+		}
+		&:after{
+			content:'';
+			position:absolute;
+			top:0;
+			left:0;
+			width:100%;
+			line-height:36px;
+			font-family:'Material-Design-Iconic-Font';
+			font-size:22px;
+			text-indent:0;
+			text-align:center;
+		}
+		&.widget_connect_facebook{
+			&:hover{
+				border-color:#3B5998;
+				background-color:#3B5998;
+			}
+			&:after{
+				content:'\f343';
+			}
+			
+		}
+		&.widget_connect_youtube{
+			&:hover{
+				border-color:#BF3228;
+				background-color:#BF3228;
+			}
+			&:after{
+				content:'\f408';
+			}
+		}
+		&.widget_connect_skype{
+			&:hover{
+				border-color:#00aff0;
+				background-color:#00aff0;
+			}
+			&:after{
+				content:'\f3ff';
+			}
+		}
+	}
+}

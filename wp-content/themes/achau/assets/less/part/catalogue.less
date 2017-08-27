@@ -1,0 +1,138 @@
+.page-catalogue{
+	#site-header{
+		position:static;
+		background-color:@maincolor3;
+		&.fixed{
+			position:fixed;
+		}
+	}
+}
+.template-catalogue{
+	background-color:@maincolor3;
+	padding:60px 0 100px;
+	h2{
+		text-align:center;
+		color: #fff;
+		text-transform: uppercase;
+		font-weight: 900;
+		font-family: 'Montserrat', sans-serif;
+		font-size: 60px;
+		line-height: 65px;
+		margin-bottom: 60px !important;
+		span{
+			display: block;
+			color: fade(#01ff69, 26%);
+			font-size: 150px;
+			line-height: 230px;
+			margin-bottom: -100px;
+		}
+	}
+	.item-book{
+		.item-book-i{
+			max-width:268px;
+			margin:0 auto 60px;
+			text-align:center;
+		}
+		ul{
+			display: inline-block;
+			width:100%;
+			max-width: 268px;
+			height: 374px;
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			perspective-origin: 0 50% 0;
+			perspective: 800px;
+			-webkit-transform: translate3d(0, 0, 0);
+			-moz-transform: translate3d(0, 0, 0);
+			-ms-transform: translate3d(0, 0, 0);
+			-o-transform: translate3d(0, 0, 0);
+			transform: translate3d(0, 0, 0);
+			&:after{
+				content:'';
+				display:block;
+				position:absolute;
+				bottom: -17px;
+				right: -162px;
+				width:325px;
+				height:91px;
+				background:url(../images/shadow-book-2.png) left bottom no-repeat;
+				.opacity(0.7);
+			}
+			li{
+				display: block;
+				position:absolute;
+				left: 0;
+				top: 0;
+				width:100%;
+				max-width: 268px;
+				height: 374px;
+				padding: 0;
+				margin: 0;
+				transform-origin: 0 50% 0;
+				transform-style: preserve-3d;
+				transition: all 0.8s cubic-bezier(.25, 1, .25, 1);
+				&.cover{
+					z-index:10;
+					width:100%;
+					max-width: 268px;
+					height: 374px;
+					transform: rotateY(0deg) translateZ(0);
+				}
+				&.page{
+					.opacity(0);
+					top:0px;
+					left: 5px;
+				}
+				&.page1 {
+					z-index:3;
+					transform: rotateY(10deg) translateZ(-1px)
+				}
+				&.page2 {
+					z-index:2;
+					transform: rotateY(20deg) translateZ(-2px);
+				}
+				&.page3 {
+					z-index:1;
+					transform: rotateY(30deg) translateZ(-3px);
+				}
+			}
+			&:hover{
+				
+				li{
+					&.page{
+						.opacity(1);
+					}
+					&.page1 {
+						transform: rotateY(-25deg);
+					}
+					&.page2 {
+						transform: rotateY(-20deg);
+					}
+					&.page3 {
+						transform: rotateY(-15deg);
+					}
+					&.cover {
+						transform: rotateY(-30deg);
+						box-shadow: none
+					}	
+				}
+			}
+		}
+		.btn-download{
+			margin-top:45px;
+			display:inline-block;
+			padding:15px 60px;
+			border:1px solid @white;
+			.border-radius(30px);
+			text-transform:uppercase;
+			color:@white;
+			font-size:18px;
+			line-height:20px;
+			&:hover{
+				background-color:@white;
+				color:@maincolor;
+			}
+		}
+	}
+}

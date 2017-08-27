@@ -1,0 +1,325 @@
+.admin-bar{
+	#site-header.fixed{
+		top:32px;
+	}
+}
+#site-header{
+	&.fixed{
+		position:fixed;
+		top:0;
+		left:0;
+		right:0;
+		z-index:1000;
+		background-color:@white;
+		.box-shadow(0 3px 6px fade(@black, 14%));
+		.transition;
+	}
+}
+.header{
+	padding:0;
+	position: relative;
+    z-index: 100;
+}
+#logo-wrapper{
+	padding-top:15px;
+	padding-bottom:10px;
+	img{
+		max-height:65px;
+	}
+}
+#navigation, .top-feature, .col-set{
+	display:inline-block;
+	vertical-align:top;
+}
+
+.top-feature{
+	padding-top:28px;
+	text-align:right;
+	.col-set{
+		margin-left:5px;
+		text-align:left;
+	}
+}
+.icon{
+	display:block;
+	width:30px;
+	height:30px;
+	cursor:pointer;
+	text-align:center;
+	color:#b4b4b4;
+	font-size:28px;
+	line-height:30px;
+	.transition;
+	&:hover{
+		color:@maincolor;
+	}
+	&:after{
+		content:'';
+		font-family: 'icomoon' !important;
+	}
+	&.acc-icon{
+		font-size:30px;
+		&:after{
+			content:'\e918';
+		}
+	}
+	&.care-icon{
+		&:after{
+			content:'\e91a';
+		}
+	}
+	&.search-toggle{
+		&:after{
+			content:'\e919';
+		}
+	}
+}
+/* TOP LANG */
+.top-lang{
+	margin-right:20px;
+	.wpml-ls-legacy-dropdown,
+	.wpml-ls-legacy-dropdown-click{
+		width:auto;
+	}
+	.wpml-ls-legacy-dropdown a,
+	.wpml-ls-legacy-dropdown-click a{
+		padding:0;
+		border:none;
+		color:#b4b4b4;
+		background-color:transparent;
+		line-height:30px;
+		text-transform:uppercase;
+	}
+	.wpml-ls-legacy-dropdown a:hover, .wpml-ls-legacy-dropdown a:focus, 
+	.wpml-ls-legacy-dropdown .wpml-ls-current-language:hover>a,
+	.wpml-ls-legacy-dropdown-click a:hover, .wpml-ls-legacy-dropdown-click a:focus, 
+	.wpml-ls-legacy-dropdown-click .wpml-ls-current-language:hover>a{
+		background:none;
+		.color;
+	}
+	.wpml-ls-legacy-dropdown a.wpml-ls-item-toggle:after,
+	.wpml-ls-legacy-dropdown-click a.wpml-ls-item-toggle:after{
+		content:"\f107";
+		font-family:'FontAwesome';
+		position:static;
+		border:none;
+		margin-left:5px;
+	}
+	.wpml-ls-legacy-dropdown .wpml-ls-sub-menu,
+	.wpml-ls-legacy-dropdown-click .wpml-ls-sub-menu{
+		width:60px;
+		background-color:@white;
+		.box-shadow(0 2px 6px fade(@black, 14%));
+		a{
+			text-align:center;
+			padding:10px 15px;
+			font-size:14px;
+			line-height:18px;
+			text-transform:none;
+			color:@textcolor !important;
+			.transition(none);
+			&:hover{
+				color:@maincolor2 !important;
+			}
+		}
+	}
+}
+/* TOP ACCOUNT */
+.top-account{
+	
+}
+/* TOP WISHLIST */
+.top-care{
+	position:relative;
+	.counter{
+		display:block;
+		position:absolute;
+		bottom:0;
+		right:0;
+		min-width:12px;
+		height:12px;    
+		overflow: hidden;
+		font-size:8px;
+		line-height:12px;
+		background-color:@maincolor;
+		color:@white;
+		text-align:center;
+		.border-radius(50%);
+		i{
+			font-style:normal;
+		}
+	}
+}
+/* TOP SEARCH */
+.top-search{
+	position:relative;
+	z-index:10;
+}
+.search-popup-bg, .popup-bg {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	cursor: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAVBAMAAABbObilAAAAMFBMVEVMaXH////////////////////////////////////////////////////////////6w4mEAAAAD3RSTlMAlAX+BKLcA5+b6hJ7foD4ZP1OAAAAkUlEQVR4XkWPoQ3CUBQAL4SktoKAbCUjgAKLJZ2ABYosngTJCHSD6joUI6BZgqSoB/+Shqde7sS9x3OGk81fdO+texMtRVTia+TsQtHEUJLdohJfgNNPJHyEJPZTsWLoxShqsWITazEwqePAn69Sw2TUxk1+euPis3EwaXy8RMHSZBIlRcKKnC5hRctjMf57/wJbBlAIs9k1BAAAAABJRU5ErkJggg==),progress;
+}
+.search-inside{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	right: 0;
+	z-index: 99999;
+	background: fade(@black, 85%);
+	.widget_search{
+		position:static;
+	}
+	.widget-title{
+		display:none;
+	}
+	.widget_search form{
+		position: absolute;
+		z-index: 10;
+		top: 50%;
+		left: 50%;
+		width:750px;
+		padding:0;
+		border-bottom:2px solid @white;
+		.translate(-50%, -50%);
+		.font20;
+		.form-input{
+			width:100%;
+			height:100%;
+			position:relative;
+		}
+		.input_text{
+			padding:5px 0;
+			height:auto;
+			background-color:transparent;
+			color:@white;
+			margin: 0;
+			font-size: 16px;
+			line-height: 24px;
+		}
+		button{
+			background-color:transparent;
+			width:auto;
+			height:34px;
+			color:@white;
+			&:hover{
+				background-color:transparent;
+				.color2;
+			}
+		}
+	}
+}
+
+/* Front Page */
+.header-fixed{
+	#site-header{
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 100;
+		right: 0;
+		background-color: transparent;
+		.transition;
+		&.fixed{
+			background-color:#333;
+			&:hover{
+				background-color:@white;
+			}
+		}
+		&:hover{
+			background-color:@white;
+			.site-navigation{
+				ul{
+					li{
+						a{
+							color:@textcolor;
+							&:hover{
+								color:@maincolor;
+							}
+						}
+						&.current-menu-parent, &.current-menu-item{
+							a{
+								color:@maincolor;
+								span{
+									-webkit-transform: translateY(-100%);
+									-moz-transform: translateY(-100%);
+									transform: translateY(-100%);
+									&:before{
+										color:@maincolor;
+										border-bottom-color:@maincolor;
+									}
+								}
+								&:after{
+									color:@maincolor;
+								}
+							}
+						}
+					}
+				}
+			}
+			.top-lang .wpml-ls-legacy-dropdown,
+			.top-lang .wpml-ls-legacy-dropdown-click {
+				a{
+					color:@textcolor;
+					&:hover{
+						color:@maincolor;
+					}
+				}
+			}
+			.icon{
+				color:@textcolor;
+				&:hover{
+					color:@maincolor;
+				}
+			}
+		}
+	}
+	&.admin-bar{
+		#site-header{
+			top: 32px;
+		}
+	}
+	.site-navigation{
+		ul{
+			li{
+				a{
+					color:@white;
+					&:hover{
+						color:@maincolor;
+					}
+				}
+				&.current-menu-parent, &.current-menu-item{
+					a{
+						color:@white;
+						span{
+							-webkit-transform: translateY(-100%);
+							-moz-transform: translateY(-100%);
+							transform: translateY(-100%);
+							&:before{
+								color:@white;
+								border-bottom-color:@white;
+							}
+						}
+						&:after{
+							color:@white;
+						}
+					}
+				}
+			}
+		}
+	}
+	.top-lang .wpml-ls-legacy-dropdown,
+	.top-lang .wpml-ls-legacy-dropdown-click {
+		a{
+			color:@white;
+			&:hover{
+				color:@maincolor;
+			}
+		}
+	}
+	.icon{
+		color:@white;
+	}
+}

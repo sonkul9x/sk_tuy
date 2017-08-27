@@ -1,0 +1,46 @@
+.color{
+	color: @maincolor;
+}
+.color2{
+	color: @maincolor2;
+}
+.textcolor{
+	color: @textcolor;
+}
+.clear{
+	&:before, &:after{
+		content:'';
+		display:table;
+	}
+	&:after{
+		clear:both;
+	}
+}
+.font14{
+    font-size: @font14;
+    line-height: @font14 + 4px;
+}
+.font16{
+	font-size:@font16;
+	line-height: @font16 + 6px;
+}
+.font18{
+	font-size:@font18;
+	line-height: @font18 + 8px;
+}
+.font20{
+	font-size:@font20;
+	line-height: @font20px + 8px;
+}
+.font182{
+	font-size:18px;
+	line-height:24px;
+	text-transform:uppercase;
+	font-family:@bodyfont2;
+	font-weight:900;
+}
+
+/* CSS3 */
+.transition{
+	.transition(all 0.35s ease);
+}
